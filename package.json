@@ -1,0 +1,27 @@
+{
+  "name": "vuetemp",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "postbuild": "node flat-prerender-paths.js && node generate-critical.mjs"
+  },
+  "dependencies": {
+    "glob": "^11.0.3",
+    "puppeteer": "^24.30.0",
+    "vue": "^3.5.22"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.1",
+    "critical": "^7.2.1",
+    "vite": "^7.1.7",
+    "vite-plugin-seo-prerender": "^1.0.0",
+    "vite-plugin-vue-devtools": "^8.0.2"
+  }
+}
